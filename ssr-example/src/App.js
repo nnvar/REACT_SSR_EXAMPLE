@@ -1,27 +1,23 @@
+// App.js
 import React from 'react';
-import { BrowserRouter, Switch, Route, Link} from 'react-router-dom'
-import{ Home} from './pages/Home';
-import {About} from './pages/About';
-import {Articles} from './pages/Articles';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Articles from './pages/Articles';
+import NavBar from './components/NavBar';
 
-
- const App = () => {
+function App() {
   return (
-    <BrowserRouter>
-      <h1>Server-Side Rendering</h1>
-      <Switch>
-        <Route path='/' exact>
-          <Home></Home>
-        </Route>
-        <Route path='/about'>
-          <About></About>
-        </Route>
-        <Route path='/articles'> 
-          <Articles></Articles>
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/articles" element={<Articles />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
