@@ -1,5 +1,5 @@
 {
-    "presets": ["@babel/preset-env", "@babel/preset-react"]
-}
-
-//https://youtu.be/00odfwhjoXU?t=852
+    "presets": ["@babel/preset-env", "@babel/preset-react", "@babel/plugin-proposal-private-property-in-object"]
+  }
+  
+//https://youtu.be/00odfwhjoXU?t=867
